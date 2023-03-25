@@ -2,6 +2,8 @@ tools - ejs, nodejs, sql
 server.js - เป็นไฟล์สำหรับตั้งค่าเซิฟเวอร์ ทำให้สามารถเห็น interface บนบราวเซอร์ได้
 package.json - ชื่อไลบรารี่ที่ใช้พัฒนาอยู่ใน dependencies
 myapp.sql - คำสั่งที่เกี่ยวข้องกับฐานข้อมูล
+utils/config - ตั้งค่ารายละเอียดฐานข้อมูล
+utils/db - สร้างการเชื่อมต่อฐานข้อมูล
 routes/routes - ติดต่อกับ controllers เมื่อมีการร้องขอจาก views
 views/home/index - หน้าหลัก
 views/partials/footer - ส่วนท้ายของแอปพลิเคชัน
