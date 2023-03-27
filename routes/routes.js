@@ -4,13 +4,10 @@ var controllers = require('../controllers');
 
 // home page routes
 routes.get('/',controllers.homeController.index);
+routes.get('/add',controllers.homeController.add);
+routes.get('/sell/:id/:price',controllers.homeController.sell);
+routes.get('/update/:totalPrice/:id',controllers.homeController.update);
+routes.get('/delete/:id',controllers.homeController.delete);
 
-// company routes
-routes.get('/company',controllers.companyController.index);
-routes.get('/company/add',controllers.companyController.add);
-routes.post('/company/add',controllers.companyController.save);
-routes.get('/company/edit/(:id)',controllers.companyController.edit);
-routes.post('/company/edit/(:id)',controllers.companyController.update);
-routes.get('/company/delete/(:id)',controllers.companyController.delete);
 
 module.exports = routes;

@@ -1,7 +1,35 @@
 <%- include ('../partials/header') %>
 <div class="row">
     <div class="col-sm-12">
-        <h1><%= title %></h1>
+        <h1 class="mb-3 mt-3"><%= title %></h1>
+        <a href="/add"><button type="button" class="btn btn-success mb-3 mt-3">+ Add Bird</button></a>
+        <p>Total Price: <%= totalSale %> | Number of bird: <%= sumBird %></p>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">No.</th>
+                <th scope="col">R</th>
+                <th scope="col">G</th>
+                <th scope="col">B</th>
+                <th scope="col">Price</th>
+                <th scope="col">Sell</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% if (birds) { %>
+                    <% birds.forEach(function(bird){ %>
+                        <tr>
+                            <th scope="row"><%= bird.BirdID %></th>
+                            <td><%= bird.R %></td>
+                            <td><%= bird.G %></td>
+                            <td><%= bird.B %></td>
+                            <td><%= bird.Price %></td>
+                            <td><a href="/sell/<%= bird.BirdID %>/<%= bird.Price %>">sell</a></td>
+                        </tr>
+                <% }) %>
+                    <% } %>
+            </tbody>
+          </table>
     </div>
 </div>
 

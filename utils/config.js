@@ -3,7 +3,7 @@ var config={
         host:'localhost',
         user :'root',
         password:'123456',
-        database:'test'
+        database:'mvc_ex1'
     }
 }
 module.exports = config;
